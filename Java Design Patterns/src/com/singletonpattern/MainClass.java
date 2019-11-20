@@ -11,8 +11,11 @@ import com.adapter.EnemyAttacker;
 import com.adapter.EnemyRobot;
 import com.adapter.EnemyRobotAdapter;
 import com.adapter.EnemyTank;
+import com.facade.BankAccountFacade;
 import com.factorypattern.PizzaStore;
 import com.factorypattern.SimplePizzaFactory;
+import com.proxy.DataBaseExecuterProxy;
+import com.proxy.DatabaseExecuter;
 
 import java.util.AbstractCollection;
 
@@ -104,6 +107,13 @@ public class MainClass {
 //         accessingBank.depositCash(1000);
 
 //         accessingBank.withdrawCash(990);
+       
+           // Proxy Pattern
+//            DatabaseExecuter nonAdmin = new DataBaseExecuterProxy("Non admin", "Admin@123");
+//            nonAdmin.executeDatabase("DELETE");
+
+//            DatabaseExecuter admin = new DataBaseExecuterProxy("Admin", "Admin@123");
+//            admin.executeDatabase("DELETE");
 
     }
 }
