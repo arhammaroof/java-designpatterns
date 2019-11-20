@@ -67,32 +67,43 @@ public class MainClass {
 //        theTV2.buttonNinePressed();
 //        theTV2.deviceFeedback();
 
-          //Adapter Pattern
-        EnemyTank rx7Tank = new EnemyTank();
+           //Adapter Pattern
+//         EnemyTank rx7Tank = new EnemyTank();
 
-        EnemyRobot fredTheRobot = new EnemyRobot();
+//         EnemyRobot fredTheRobot = new EnemyRobot();
 
-        EnemyAttacker robotAdapter = new EnemyRobotAdapter(fredTheRobot);
+//         EnemyAttacker robotAdapter = new EnemyRobotAdapter(fredTheRobot);
 
-        System.out.println("The Robot");
+//         System.out.println("The Robot");
 
-        fredTheRobot.reactToHuman("Paul");
-        fredTheRobot.walkForward();
-        fredTheRobot.smashWithHands();
-        System.out.println();
+//         fredTheRobot.reactToHuman("Paul");
+//         fredTheRobot.walkForward();
+//         fredTheRobot.smashWithHands();
+//         System.out.println();
 
-        System.out.println("The Enemy Tank");
+//         System.out.println("The Enemy Tank");
 
-        rx7Tank.assignDriver("Frank");
-        rx7Tank.driveForward();
-        rx7Tank.fireWeapon();
-        System.out.println();
+//         rx7Tank.assignDriver("Frank");
+//         rx7Tank.driveForward();
+//         rx7Tank.fireWeapon();
+//         System.out.println();
 
-        System.out.println("The Robot with Adapter");
+//         System.out.println("The Robot with Adapter");
 
-        robotAdapter.assignDriver("Mark");
-        robotAdapter.driveForward();
-        robotAdapter.fireWeapon();
+//         robotAdapter.assignDriver("Mark");
+//         robotAdapter.driveForward();
+//         robotAdapter.fireWeapon();
+        
+//         // Facade Pattern
+//         BankAccountFacade accessingBank = new BankAccountFacade(12345678, 1234);
+
+//         accessingBank.withdrawCash(50.00);
+
+//         accessingBank.withdrawCash(990.00);
+
+//         accessingBank.depositCash(1000);
+
+//         accessingBank.withdrawCash(990);
 
     }
 }
