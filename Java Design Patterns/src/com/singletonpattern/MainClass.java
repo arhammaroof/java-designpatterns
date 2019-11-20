@@ -27,11 +27,34 @@ public class MainClass {
 //        PizzaStore ChicStore = new ChicagoStylePizzaStore();
 //        ChicStore.orderPizza("veggie");
 
-        //Simple factory Pattern
+         //Simple factory Pattern
 
-        SimplePizzaFactory spf = new SimplePizzaFactory();
-        PizzaStore ps = new PizzaStore(spf);
-        ps.orderPizza("cheese");
+//        SimplePizzaFactory spf = new SimplePizzaFactory();
+//        PizzaStore ps = new PizzaStore(spf);
+//        ps.orderPizza("cheese");
+
+        // Builder Pattern
+//        Account account = new Account.Builder().id(4).email("abc@xyz.com").build();
+//        System.out.println(account.getEmail());
+
+        // Bridge Pattern
+        RemoteButton theTV = new TVRemoteMute(new TVDevice(1, 200));
+
+        RemoteButton theTV2 = new TVRemotePause(new TVDevice(1, 200));
+
+
+        System.out.println("Test TV with Mute");
+
+        theTV.buttonFivePressed();
+        theTV.buttonSixPressed();
+        theTV.buttonNinePressed();
+
+        System.out.println("\nTest TV with Pause");
+
+        theTV2.buttonFivePressed();
+        theTV2.buttonSixPressed();
+        theTV2.buttonNinePressed();
+        theTV2.deviceFeedback();
     }
 }
 
