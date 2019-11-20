@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d769da8-8c7e-4958-aff3-1af061c8d51f" name="Default Changelist" comment="" />
+    <list default="true" id="0d769da8-8c7e-4958-aff3-1af061c8d51f" name="Default Changelist" comment="commiting from the IDE" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +15,23 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Arham" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\armaroof\IdeaProjects\Java Design Patterns\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1Tmb9rAZhDBTlbkhXW3hXXPEN5J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -65,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574068070024</updated>
-      <workItem from="1574068073770" duration="16089000" />
+      <workItem from="1574068073770" duration="17235000" />
     </task>
     <servers />
   </component>
