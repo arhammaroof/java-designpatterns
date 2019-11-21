@@ -15,6 +15,8 @@ import com.chainofresponsibility.*;
 import com.facade.BankAccountFacade;
 import com.factorypattern.PizzaStore;
 import com.factorypattern.SimplePizzaFactory;
+import com.observer.StockGrabber;
+import com.observer.StockObserver;
 import com.proxy.DataBaseExecuterProxy;
 import com.proxy.DatabaseExecuter;
 
@@ -119,16 +121,30 @@ public class MainClass {
 
         //Chain of responsibility
 
-        EmailHandler eh1 = new SpamHandler();
-        EmailHandler eh2 = new ComplaintHandler();
-        EmailHandler eh3 = new FanMailHandler();
+//        EmailHandler eh1 = new SpamHandler();
+//        EmailHandler eh2 = new ComplaintHandler();
+//        EmailHandler eh3 = new FanMailHandler();
+//
+//        eh1.setNextChain(eh2);
+//        eh2.setNextChain(eh3);
+//
+//        Request req = new Request("Fan mail");
+//        eh1.handleRequest(req);
 
-        eh1.setNextChain(eh2);
-        eh2.setNextChain(eh3);
+        //Observer
 
-        Request req = new Request("Fan mail");
-        eh1.handleRequest(req);
+        StockGrabber stockGrabber = new StockGrabber();
+        StockObserver observer1 = new StockObserver(stockGrabber);
 
+        stockGrabber.setAaplPrice(193.44);
+        stockGrabber.setGoogPrice(155.00);
+        stockGrabber.setIbmPrice(188.32);
+
+        StockObserver observer2 = new StockObserver(stockGrabber);
+
+        stockGrabber.setAaplPrice(202.21);
+        stockGrabber.setGoogPrice(205.04);
+        stockGrabber.setIbmPrice(208.52);
     }
 }
 
