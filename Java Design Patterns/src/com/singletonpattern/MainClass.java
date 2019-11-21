@@ -11,18 +11,21 @@ import com.adapter.EnemyAttacker;
 import com.adapter.EnemyRobot;
 import com.adapter.EnemyRobotAdapter;
 import com.adapter.EnemyTank;
+import com.facade.BankAccountFacade;
 import com.factorypattern.PizzaStore;
 import com.factorypattern.SimplePizzaFactory;
+import com.proxy.DataBaseExecuterProxy;
+import com.proxy.DatabaseExecuter;
 
+import javax.xml.crypto.Data;
 import java.util.AbstractCollection;
 
 
 public class MainClass {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) throws Exception {
 
         //Singleton
-
+//
 //        Singleton obj;
 //        obj=Singleton.getInstance();
 //        Singleton obj2;
@@ -67,43 +70,52 @@ public class MainClass {
 //        theTV2.buttonNinePressed();
 //        theTV2.deviceFeedback();
 
-           //Adapter Pattern
-//         EnemyTank rx7Tank = new EnemyTank();
+          //Adapter Pattern
+//        EnemyTank rx7Tank = new EnemyTank();
+//
+//        EnemyRobot fredTheRobot = new EnemyRobot();
+//
+//        EnemyAttacker robotAdapter = new EnemyRobotAdapter(fredTheRobot);
+//
+//        System.out.println("The Robot");
+//
+//        fredTheRobot.reactToHuman("Paul");
+//        fredTheRobot.walkForward();
+//        fredTheRobot.smashWithHands();
+//        System.out.println();
+//
+//        System.out.println("The Enemy Tank");
+//
+//        rx7Tank.assignDriver("Frank");
+//        rx7Tank.driveForward();
+//        rx7Tank.fireWeapon();
+//        System.out.println();
+//
+//        System.out.println("The Robot with Adapter");
+//
+//        robotAdapter.assignDriver("Mark");
+//        robotAdapter.driveForward();
+//        robotAdapter.fireWeapon();
 
-//         EnemyRobot fredTheRobot = new EnemyRobot();
+        // Facade Pattern
+//        BankAccountFacade accessingBank = new BankAccountFacade(12345678, 1234);
+//
+//        accessingBank.withdrawCash(50.00);
+//
+//        accessingBank.withdrawCash(990.00);
+//
+//        accessingBank.depositCash(1000);
+//
+//        accessingBank.withdrawCash(990);
 
-//         EnemyAttacker robotAdapter = new EnemyRobotAdapter(fredTheRobot);
+        // Proxy Pattern
+//        DatabaseExecuter nonAdmin = new DataBaseExecuterProxy("Non admin", "Admin@123");
+//        nonAdmin.executeDatabase("DELETE");
+//
+        DatabaseExecuter admin = new DataBaseExecuterProxy("Admin", "Admin@123");
+        admin.executeDatabase("DELETE");
 
-//         System.out.println("The Robot");
-
-//         fredTheRobot.reactToHuman("Paul");
-//         fredTheRobot.walkForward();
-//         fredTheRobot.smashWithHands();
-//         System.out.println();
-
-//         System.out.println("The Enemy Tank");
-
-//         rx7Tank.assignDriver("Frank");
-//         rx7Tank.driveForward();
-//         rx7Tank.fireWeapon();
-//         System.out.println();
-
-//         System.out.println("The Robot with Adapter");
-
-//         robotAdapter.assignDriver("Mark");
-//         robotAdapter.driveForward();
-//         robotAdapter.fireWeapon();
-        
-//         // Facade Pattern
-//         BankAccountFacade accessingBank = new BankAccountFacade(12345678, 1234);
-
-//         accessingBank.withdrawCash(50.00);
-
-//         accessingBank.withdrawCash(990.00);
-
-//         accessingBank.depositCash(1000);
-
-//         accessingBank.withdrawCash(990);
+        // test to check if the push is working in git
 
     }
 }
