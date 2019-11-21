@@ -11,6 +11,7 @@ import com.adapter.EnemyAttacker;
 import com.adapter.EnemyRobot;
 import com.adapter.EnemyRobotAdapter;
 import com.adapter.EnemyTank;
+import com.chainofresponsibility.*;
 import com.facade.BankAccountFacade;
 import com.factorypattern.PizzaStore;
 import com.factorypattern.SimplePizzaFactory;
@@ -19,6 +20,7 @@ import com.proxy.DatabaseExecuter;
 
 import javax.xml.crypto.Data;
 import java.util.AbstractCollection;
+import java.util.EnumMap;
 
 
 public class MainClass {
@@ -112,10 +114,20 @@ public class MainClass {
 //        DatabaseExecuter nonAdmin = new DataBaseExecuterProxy("Non admin", "Admin@123");
 //        nonAdmin.executeDatabase("DELETE");
 //
-        DatabaseExecuter admin = new DataBaseExecuterProxy("Admin", "Admin@123");
-        admin.executeDatabase("DELETE");
+//        DatabaseExecuter admin = new DataBaseExecuterProxy("Admin", "Admin@123");
+//        admin.executeDatabase("DELETE");
 
-        // test to check if the push is working in git
+        //Chain of responsibility
+
+        EmailHandler eh1 = new SpamHandler();
+        EmailHandler eh2 = new ComplaintHandler();
+        EmailHandler eh3 = new FanMailHandler();
+
+        eh1.setNextChain(eh2);
+        eh2.setNextChain(eh3);
+
+        Request req = new Request("Fan mail");
+        eh1.handleRequest(req);
 
     }
 }
