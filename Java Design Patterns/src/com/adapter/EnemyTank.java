@@ -1,6 +1,9 @@
 package com.adapter;
 import java.util.Random;
 
+/**
+ * Enemy class which implements the Enemy interface
+ */
 public class EnemyTank implements EnemyAttacker {
     Random generator = new Random();
 
