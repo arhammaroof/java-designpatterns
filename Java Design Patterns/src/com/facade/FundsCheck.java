@@ -1,5 +1,8 @@
 package com.facade;
 
+/**
+ * class that checks if the Funds are available which are being requested before withdrawing and depositing the funds
+ */
 public class FundsCheck {
     private double cashInAccount = 1000.00;
 
@@ -9,6 +12,11 @@ public class FundsCheck {
 
     public void increaseCashInAccount(double cashDeposited) { cashInAccount += cashDeposited; }
 
+    /**
+     * checks the cash if available then decrement the cash in account
+     * @param cashToWithdrawal cash the user wants to withdraw
+     * @return returns a boolean type depending upon the cash that needs to be withdrawn is available or not
+     */
     public boolean haveEnoughMoney(double cashToWithdrawal) {
 
         if(cashToWithdrawal > getCashInAccount()) {
@@ -30,6 +38,9 @@ public class FundsCheck {
 
     }
 
+    /**
+     * @param cashToDeposit the amount that needs to be doposited by the user
+     */
     public void makeDeposit(double cashToDeposit) {
 
         increaseCashInAccount(cashToDeposit);

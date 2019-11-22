@@ -1,5 +1,8 @@
 package com.factorypattern;
 
+/**
+ * Concrete Product
+ */
 public class VeggiePizza extends Pizza {
 public VeggiePizza(){}
 public void make(){

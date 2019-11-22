@@ -1,5 +1,8 @@
 package com.facade;
 
+/**
+ * class that checks if the Account number is correct
+ */
 public class AccountNumberCheck {
     private int accountNumber = 12345678;
 

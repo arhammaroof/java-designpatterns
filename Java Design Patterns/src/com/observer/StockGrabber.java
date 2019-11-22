@@ -2,7 +2,10 @@ package com.observer;
 
 import java.util.ArrayList;
 
-//concrete Subject
+/**
+ * Concrete Subject class
+ * when a change is made(in this case setStockPrice methods) the notifyObserver() method is called which calls the update() method of the observer to update the current changes
+ */
 public class StockGrabber implements SubjectInterface {
     private ArrayList<ObserverInterface> observers;
     private double ibmPrice;
@@ -18,6 +21,10 @@ public class StockGrabber implements SubjectInterface {
     }
 
     @Override
+    /**
+     * finds the index of the observer that needs to be removed
+     * removes the observer
+     */
     public void unregister(ObserverInterface deleteObserver) {
         int observerIndex = observers.indexOf(deleteObserver);
         System.out.println("Observer " + (observerIndex+1)+ " deleted");
@@ -25,12 +32,19 @@ public class StockGrabber implements SubjectInterface {
     }
 
     @Override
+    /**
+     * calls the update method for all the users
+     */
     public void notifyObserver() {
         for(ObserverInterface observer: observers){
             observer.update(ibmPrice, aaplPrice, googPrice);
         }
     }
 
+    /**
+     * when there is a new stock Price
+     * each subject is notified
+     */
     public void setIbmPrice(double newIbmPrice){
         this.ibmPrice = newIbmPrice;
         notifyObserver();

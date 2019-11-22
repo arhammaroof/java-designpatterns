@@ -1,5 +1,8 @@
 package com.facade;
 
+/**
+ * Class that checks if the security code is correct
+ */
 public class SecurityCodeCheck {
     private int securityCode = 1234;
 

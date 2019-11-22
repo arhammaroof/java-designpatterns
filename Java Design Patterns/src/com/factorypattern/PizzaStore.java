@@ -1,5 +1,10 @@
 package com.factorypattern;
 
+/**
+ * uses a Factory object to create products
+ * and the use the product to call the methods required
+ * This is a client for the Factory
+ */
 public class PizzaStore {
     SimplePizzaFactory factory;
     public PizzaStore(SimplePizzaFactory factory){

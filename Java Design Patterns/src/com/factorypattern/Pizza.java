@@ -1,5 +1,8 @@
 package com.factorypattern;
 
+/**
+ * Products abstract class
+ */
 public abstract class Pizza {
     public void Prepare(){
         System.out.println("Preparing");
