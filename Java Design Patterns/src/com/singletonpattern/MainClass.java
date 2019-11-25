@@ -1,5 +1,8 @@
 package com.singletonpattern;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.*;
 import com.Bridge.RemoteButton;
 import com.Bridge.TVDevice;
 import com.Bridge.TVRemoteMute;
@@ -15,10 +18,15 @@ import com.chainofresponsibility.*;
 import com.facade.BankAccountFacade;
 import com.factorypattern.PizzaStore;
 import com.factorypattern.SimplePizzaFactory;
+import com.memento.TestMementoClass;
 import com.observer.StockGrabber;
 import com.observer.StockObserver;
 import com.proxy.DataBaseExecuterProxy;
 import com.proxy.DatabaseExecuter;
+import com.strategy.MobilePhones;
+import com.strategy.SamsungPhone;
+import com.strategy.iPhone;
+
 
 import javax.xml.crypto.Data;
 import java.util.AbstractCollection;
@@ -132,19 +140,31 @@ public class MainClass {
 //        eh1.handleRequest(req);
 
         //Observer
+//
+//        StockGrabber stockGrabber = new StockGrabber();
+//        StockObserver observer1 = new StockObserver(stockGrabber);
+//
+//        stockGrabber.setAaplPrice(193.44);
+//        stockGrabber.setGoogPrice(155.00);
+//        stockGrabber.setIbmPrice(188.32);
+//
+//        StockObserver observer2 = new StockObserver(stockGrabber);
+//
+//        stockGrabber.setAaplPrice(202.21);
+//        stockGrabber.setGoogPrice(205.04);
+//        stockGrabber.setIbmPrice(208.52);
 
-        StockGrabber stockGrabber = new StockGrabber();
-        StockObserver observer1 = new StockObserver(stockGrabber);
+        //Strategy
+//        MobilePhones iphone = new iPhone(6, 8, 256);
+//        iphone.printConfig();
+//        System.out.println(iphone.clickPhoto());
+//        MobilePhones samsung = new SamsungPhone(5, 4, 128);
+//        samsung.printConfig();
+//        System.out.println(samsung.clickPhoto());
 
-        stockGrabber.setAaplPrice(193.44);
-        stockGrabber.setGoogPrice(155.00);
-        stockGrabber.setIbmPrice(188.32);
-
-        StockObserver observer2 = new StockObserver(stockGrabber);
-
-        stockGrabber.setAaplPrice(202.21);
-        stockGrabber.setGoogPrice(205.04);
-        stockGrabber.setIbmPrice(208.52);
+        //Memento
+        TestMementoClass tmc = new TestMementoClass();
+        tmc.TestMemento();
     }
 }
 
