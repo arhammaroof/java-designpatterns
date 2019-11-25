@@ -15,6 +15,7 @@ import com.adapter.EnemyRobot;
 import com.adapter.EnemyRobotAdapter;
 import com.adapter.EnemyTank;
 import com.chainofresponsibility.*;
+import com.command.*;
 import com.facade.BankAccountFacade;
 import com.factorypattern.PizzaStore;
 import com.factorypattern.SimplePizzaFactory;
@@ -163,8 +164,40 @@ public class MainClass {
 //        System.out.println(samsung.clickPhoto());
 
         //Memento
-        TestMementoClass tmc = new TestMementoClass();
-        tmc.TestMemento();
+//        TestMementoClass tmc = new TestMementoClass();
+//        tmc.TestMemento();
+
+        // Gets the ElectronicDevice to use
+
+        ElectronicDevice newDevice = TvRemote.getDevice();
+
+        // TurnTVOn contains the command to turn on the tv
+        // When execute() is called on this command object
+        // it will execute the method on() in Television
+
+        TurnTvOn onCommand = new TurnTvOn(newDevice);
+
+        // Calling the execute() causes on() to execute in Television
+
+        DeviceButton onPressed = new DeviceButton(onCommand);
+
+        // When press() is called theCommand.execute(); executes
+
+        onPressed.press();
+
+        //----------------------------------------------------------
+
+        // Now when execute() is called off() of Television executes
+
+        TurnTvOff offCommand = new TurnTvOff(newDevice);
+
+        // Calling the execute() causes off() to execute in Television
+
+        onPressed = new DeviceButton(offCommand);
+
+        // When press() is called theCommand.execute(); executes
+
+        onPressed.press();
     }
 }
 
